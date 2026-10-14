@@ -1,7 +1,7 @@
 <template>
     <v-navigation-drawer v-model="drawer" permanent rail expand-on-hover>
         <v-sheet class="pa-4 text-center" color="teal-darken-3">
-            <v-img src="@/assets/logo.png" contain height="32" />
+            <v-icon icon="mdi-paw" size="28" />
         </v-sheet>
 
         <v-divider></v-divider>
