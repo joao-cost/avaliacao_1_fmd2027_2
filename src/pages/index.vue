@@ -10,8 +10,12 @@
       os pets cadastrados usando os filtros.
     </v-card-text>
     <v-card-actions>
-      <v-btn color="teal-darken-3" prepend-icon="mdi-paw" to="/pets">Cadastro de Pets</v-btn>
-      <v-btn color="teal-darken-3" prepend-icon="mdi-magnify" to="/consulta">Consultar Pets</v-btn>
+      <BotaoAtalho icone="mdi-paw" texto="Cadastro de Pets" rota="/pets" />
+      <BotaoAtalho icone="mdi-magnify" texto="Consultar Pets" rota="/consulta" />
     </v-card-actions>
   </v-card>
 </template>
+
+<script setup>
+import BotaoAtalho from '@/components/BotaoAtalho.vue'
+</script>
