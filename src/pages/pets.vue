@@ -60,7 +60,7 @@
                             v-model="especie.value.value" />
                         </v-col>
                         <v-col cols="12" sm="4">
-                            <v-text-field label="Idade (anos)" type="number"
+                            <v-number-input label="Idade (anos)" :min="0" :max="30"
                             :error-messages="idade.errorMessage.value"
                             v-model="idade.value.value" />
                         </v-col>
@@ -75,12 +75,12 @@
                             v-model="cep.value.value" />
                         </v-col>
                         <v-col cols="12" sm="5">
-                            <v-text-field label="Cidade" :loading="carregandoCep"
+                            <v-text-field label="Cidade" :loading="carregandoCep" readonly
                             :error-messages="cidade.errorMessage.value"
                             v-model="cidade.value.value" />
                         </v-col>
                         <v-col cols="12" sm="3">
-                            <v-text-field label="UF" :loading="carregandoCep"
+                            <v-text-field label="UF" :loading="carregandoCep" readonly
                             v-model="uf.value.value" />
                         </v-col>
                         <v-col cols="12">
@@ -137,7 +137,7 @@ const { handleSubmit, resetForm, setValues } = useForm({
             return 'Selecione a espécie.'
         },
         idade(value) {
-            if (value !== '' && value >= 0 && value <= 30) return true
+            if (value !== null && value !== '' && value >= 0 && value <= 30) return true
 
             return 'A idade deve ser entre 0 e 30 anos.'
         },
@@ -177,7 +177,7 @@ function createNewRecord() {
         nome: '',
         tutor: '',
         especie: null,
-        idade: '',
+        idade: null,
         dataVacina: '',
         cep: '',
         cidade: '',
@@ -237,12 +237,16 @@ watch(cep.value, async () => {
         try {
             const resultado = await axios.get(`https://viacep.com.br/ws/${cepFormatado}/json/`)
             if (resultado.data.erro) {
+                cidade.value.value = ''
+                uf.value.value = ''
                 mostrarMensagem('CEP não encontrado.', 'error')
             } else {
                 cidade.value.value = resultado.data.localidade
                 uf.value.value = resultado.data.uf
             }
         } catch (erro) {
+            cidade.value.value = ''
+            uf.value.value = ''
             mostrarMensagem('Erro ao consultar o CEP. Tente novamente.', 'error')
         }
         carregandoCep.value = false

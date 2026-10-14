@@ -15,10 +15,10 @@
                     <v-select label="Espécie" :items="especies" v-model="filtroEspecie" clearable />
                 </v-col>
                 <v-col cols="6" sm="2">
-                    <v-text-field label="Idade mínima" type="number" v-model="idadeMinima" />
+                    <v-number-input label="Idade mínima" :min="0" v-model="idadeMinima" clearable />
                 </v-col>
                 <v-col cols="6" sm="2">
-                    <v-text-field label="Idade máxima" type="number" v-model="idadeMaxima" />
+                    <v-number-input label="Idade máxima" :min="0" v-model="idadeMaxima" clearable />
                 </v-col>
                 <v-col cols="12" sm="4">
                     <v-switch label="Somente castrados" color="teal-darken-3" v-model="somenteCastrados" />
@@ -59,8 +59,8 @@ const pets = ref([])
 // filtros
 const busca = ref('')
 const filtroEspecie = ref(null)
-const idadeMinima = ref('')
-const idadeMaxima = ref('')
+const idadeMinima = ref(null)
+const idadeMaxima = ref(null)
 const somenteCastrados = ref(false)
 
 const especies = ['Cachorro', 'Gato', 'Pássaro', 'Roedor', 'Outro']
@@ -92,9 +92,9 @@ const petsFiltrados = computed(() => {
 
         if (filtroEspecie.value && pet.especie !== filtroEspecie.value) return false
 
-        if (idadeMinima.value !== '' && pet.idade < Number(idadeMinima.value)) return false
+        if (idadeMinima.value != null && pet.idade < Number(idadeMinima.value)) return false
 
-        if (idadeMaxima.value !== '' && pet.idade > Number(idadeMaxima.value)) return false
+        if (idadeMaxima.value != null && pet.idade > Number(idadeMaxima.value)) return false
 
         if (somenteCastrados.value && !pet.castrado) return false
 
@@ -105,8 +105,8 @@ const petsFiltrados = computed(() => {
 function limparFiltros() {
     busca.value = ''
     filtroEspecie.value = null
-    idadeMinima.value = ''
-    idadeMaxima.value = ''
+    idadeMinima.value = null
+    idadeMaxima.value = null
     somenteCastrados.value = false
 }
 
