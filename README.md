@@ -5,7 +5,7 @@ Avaliação 2 – FACET-SNP-310 – Frameworks Modernos para Desenvolvimento de 
 ## Integrantes
 - João Vitor de Souza Costa - @joao-cost
 - Fellipe Melhoranca B. Tomasella - @Fellipe-Tomasella
-- Inglid Pablina de A. Sandeski
+- Inglid Pablina de A. Sandeski - @inglid-sandeski
 
 ## Tema
 
