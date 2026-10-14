@@ -1,6 +1,6 @@
 # PetShop
 
-Avaliação 2 – FACET-SNP-310 – Frameworks Modernos para Desenvolvimento de Sistemas (2026.2)
+Avaliação 1 – FACET-SNP-310 – Frameworks Modernos para Desenvolvimento de Sistemas (2026.2)
 
 ## Integrantes
 - João Vitor de Souza Costa - @joao-cost
