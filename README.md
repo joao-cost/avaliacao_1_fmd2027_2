@@ -12,7 +12,7 @@ Avaliação 2 – FACET-SNP-310 – Frameworks Modernos para Desenvolvimento de 
 Todos os commits estão na conta do João Vitor, mas o trabalho foi feito pelo grupo:
 
 - **Fellipe** desenvolveu a base do sistema antes de viajar e enviou o projeto em zip
-  para o João Vitor e a Inglid. Por causa da viagem, ele não estará presente na aula de hoje.
+  para o João Vitor e a Inglid. Por causa da viagem, ele não estará presente na aula de 14/10/2026.
 - **João Vitor** subiu o projeto para o GitHub e fez os ajustes seguintes.
 - **Inglid** testou e validou o funcionamento do sistema.
 
