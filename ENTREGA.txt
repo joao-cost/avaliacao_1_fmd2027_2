@@ -1,0 +1,16 @@
+Avaliação 2 – FACET-SNP-310 – Frameworks Modernos para Desenvolvimento de Sistemas (2026.2)
+Prof. Ivan Luiz Pedroso Pires
+
+Projeto: PetShop – CRUD de pets com página de consulta e filtros
+
+Repositório (público):
+https://github.com/joao-cost/avaliacao_1_fmd2027_2
+
+Integrantes:
+- João Vitor de Souza Costa - @joao-cost
+- Fellipe Melhoranca B. Tomasella - @Fellipe-Tomasella
+- Inglid Pablina de A. Sandeski - @inglid-sandeski
+
+Como executar:
+npm install
+npm run dev
